@@ -41,9 +41,12 @@ html {
     scroll-behavior:smooth
 }
 
-.image-redsmoke {
-    background-image:url(./HeaderClip.mp4);
-    background-attachment: fixed;
+.image-section1 {
+    background-image:url(./DesertWar.jpg);
+    /* background-attachment: fixed; */
+}
+.image-section2 {
+    background-image:url(./ArmyBattle1.jpg);
 }
 
 .post-meta {
@@ -68,34 +71,20 @@ html {
     text-transform:uppercase
 }
 
-.post-meta__more {
-    margin-top: 1.2rem;
-    display: inline-block;
-    max-width: 200px;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: .85rem;
-    letter-spacing: .1rem;
-    opacity: 1;
-    color: #fff;
-    border: 2px solid white;
-    padding: 1rem 2rem;
-    text-decoration:none
-}
-
 .post-meta__order {
     margin-top: 1.2rem;
     display: inline-block;
-    max-width: 200px;
+    max-width: 229px;
     text-transform: uppercase;
     font-weight: 700;
     font-size: .85rem;
     letter-spacing: .1rem;
-    opacity: 1;
-    color: #fff;
+    opacity: 0.5;
+    color: #000000;
     border: 2px solid white;
     padding: 1rem 2rem;
-    text-decoration:none
+    text-decoration:none;
+    border-radius: 30px;
 }
 
 .post-meta__order:hover {
@@ -103,9 +92,67 @@ html {
     color:#000
 }
 
+.hidden {
+    display: none;
+}
+
+input {
+    margin: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
 footer {
     background: black;
     text-align: center;
     color: #555;
     padding: 40px
+}
+* {
+    cursor: none;
+}
+.cursor {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* border: 1.5px solid white;*/
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.cursor::after, .cursor::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50px;
+}
+
+.cursor.click::before{
+    animation: click 1s ease forwards;
+    background-color: white;
+}
+
+.cursor::before {
+    background-color: antiquewhite;
+    /* transform: translate(-50%, -50%) scale(3); */
+}
+
+@keyframes click {
+   0%{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+   } 
+   100%{
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(7)
+   }
 }

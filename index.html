@@ -4,34 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desert Force</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+<div class="cursor"></div>
     <header>
         <h1>DESERT FORCE</h1>
             <nav>
                 <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="#">Join the waitlist</a>
+                <a href="#contact">Contact</a>
             </nav>
     </header>
     <main>
-        <section class="feature image-redsmoke">
+        <section class="feature image-section1">
             <div class="post-meta">
                 <h2 class="post-meta__tagline">We brought the battle to your console</h2>
                 <h1 class="post-meta__heading">Ready to command your army into victory?</h1>
-                <a class="post-meta__order" href="#">Place an Order</a>
-            </div>
+                <button id="waitlistBtn" class="post-meta__order">Join the waitlist</button>
+              <p id="confirmationMsg" class="hidden"></p>
+            </div> 
         </section>
-
-        <section class="feature">
+        <section class="feature image-section2" id="contact">
             <div class="post-meta">
-                <h2 class="post-meta__tagline">We brought the battle to your console</h2>
-                <h1 class="post-meta__heading">Ready to command your army into victory?</h1>
-                <a class="post-meta__order" href="#">Place an Order</a>
+                <h2 class="post-meta__tagline">You don't find us, we find you!</h2>
+                <h1 class="post-meta__heading">READY?</h1>
+                <a class="post-meta__order" href="#contact">Click here to be found</a>
             </div>
         </section>
     </main>
-    <script src="app.js"></script>
+<footer>Desert Force &copy; 2024</footer>
+<script src="./app.js"></script>
 </body>
 </html>
